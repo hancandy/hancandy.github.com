@@ -1,0 +1,27 @@
+---
+# The main page layout
+---
+
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:description" content="{{ page.description }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://kimberlyliu.com{{ page.url }}" />
+        <meta property="og:image" content="http://kimberlyliu.com/assets/img/opengraph-cover.jpg" />
+
+        <link rel="stylesheet" type="text/css" href="/assets/css/app.css" media="screen">
+        <link rel="canonical" href="http://kimberlyliy.com{{ page.url }}">
+
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}">
+    </head>
+    <body>
+        {% for section in page.sections %}
+        {% endfor %}
+    </body>
+</html>
