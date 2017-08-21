@@ -18,6 +18,14 @@
     </head>
     <body>
         {% for section in page.sections %}
+            {% if section and section.template %}
+                {% include partials/{{ section.template }}.html section=section %}
+            {% else %}
+                <div class="error">
+                    Error: Section has no template
+                    {{ section | inspect }}
+                </div>
+            {% endif %}
         {% endfor %}
     </body>
 </html>
