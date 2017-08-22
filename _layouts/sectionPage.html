@@ -17,6 +17,13 @@
         <meta name="description" content="{{ page.description }}">
     </head>
     <body>
+        <header class="header">
+            <div class="container header__content">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </div>
+        </header>
+
         {% for section in page.sections %}
             {% if section and section.template %}
                 {% include partials/{{ section.template }}.html section=section %}
@@ -27,5 +34,16 @@
                 </div>
             {% endif %}
         {% endfor %}
+
+        <footer class="footer">
+            <h4>Kimberly Liu</h4>
+
+            <div class="container footer__links">
+                <a class="footer__link" href="https://www.linkedin.com/in/kimberly-liu-a5626027/">
+                    <img src="/assets/svg/linkedin.svg">
+                    @kimberlyliu
+                </a>
+            </div>
+        </footer>
     </body>
 </html>
