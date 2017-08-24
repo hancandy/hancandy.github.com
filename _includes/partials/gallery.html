@@ -4,6 +4,12 @@
 
         <div class="section__body">
             {{ include.section.body }}
+            
+            {% if include.section.video %}
+                <div class="section__video">
+                    <iframe type="text/html" src="https://www.youtube.com/embed/{{ include.section.video }}" frameborder="0"></iframe>
+                </div>
+            {% endif %}
         </div>
 
         <div class="section__grid">
